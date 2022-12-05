@@ -8,6 +8,7 @@ const colors: ColorsType = {
   aliceBlue: '#F1F6FA',
   indigo: '#194060',
   prussianBlue: '#002B4E',
+  steelTeal: '#607D94',
   white: '#FFFFFF'
 };
 
@@ -19,13 +20,23 @@ const fonts: FontsType = {
 export default {
   common: {
     background: colors.aliceBlue,
+    borderRadius: '6px',
     paragraph: fonts.openSans
+  },
+  hamburger: {
+    background: colors.white
   },
   header: {
     background: colors.prussianBlue,
-    border: colors.indigo,
+    border: {
+      bottom: colors.indigo,
+      inactive: colors.steelTeal
+    },
     color: colors.white,
-    font: headline['h7-medium']
+    font: {
+      desktop: headline['h7-medium'],
+      mobile: headline.h6
+    }
   },
   logo: {
     color: colors.white

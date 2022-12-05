@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { LinkType } from '../../types/common';
 import { Wrapper } from '../styled.components';
-import { HeaderRoot } from './header.style';
+import { HeaderRoot, Navigation } from './header.style';
 import dictionary from '../../data/dictionary';
 import { links } from '../../data/variables';
 import Logo from '../Logo';
+import { HeaderProps } from '../../types/props';
+import Hamburger from '../Hamburger';
 
 const { navigation } = dictionary;
 const navigationItems: LinkType[] = [
@@ -30,30 +32,41 @@ const navigationItems: LinkType[] = [
   }
 ];
 
-const Header = (): JSX.Element => (
-  <HeaderRoot className="header">
+const Header = ({ isOpened, onClick }: HeaderProps): JSX.Element => (
+  <HeaderRoot
+    className="header"
+    isOpened={isOpened}
+  >
     <Wrapper className="header__wrapper">
       <Logo className="header__logo" />
-      <nav className="header__navigation">
+      <Hamburger
+        className="header__hamburger"
+        onClick={onClick}
+        isOpened={isOpened}
+      />
+      <Navigation
+        className="header__navigation"
+        isOpened={isOpened}
+      >
         <ul className="navigation__list">
           {
-            navigationItems.map(({ label, link }, index) => (
-              <li
-                className="navigation__item"
-                key={`${label}-${index}`}
-              >
-                <NavLink
-                  className="navigation__link"
-                  end
-                  to={link}
+              navigationItems.map(({ label, link }, index) => (
+                <li
+                  className="navigation__item"
+                  key={`${label}-${index}`}
                 >
-                  { label }
-                </NavLink>
-              </li>
-            ))
-          }
+                  <NavLink
+                    className="navigation__link"
+                    end
+                    to={link}
+                  >
+                    { label }
+                  </NavLink>
+                </li>
+              ))
+            }
         </ul>
-      </nav>
+      </Navigation>
     </Wrapper>
   </HeaderRoot>
 );

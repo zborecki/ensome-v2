@@ -11,7 +11,7 @@ const Logo = ({ className }: BaseProps): JSX.Element => {
   const { logo } = useTheme();
 
   return (
-    <LogoRoot className={`${className} logo`}>
+    <LogoRoot className={className}>
       <FontAwesomeIcon
         className="logo__icon"
         icon={faPaperclip}

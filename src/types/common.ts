@@ -14,11 +14,12 @@ export type ColorThemeType = {
 };
 
 export type ColorsType = {
-  [color in 'aliceBlue' | 'prussianBlue' | 'white' | 'indigo']: string;
+  [color in 'aliceBlue' | 'prussianBlue' | 'white' | 'indigo' | 'steelTeal']: string;
 };
 
 export type CommonThemeType = BackgroundThemeType & {
   paragraph: string;
+  borderRadius: string;
 };
 
 export type FontsType = {
@@ -27,6 +28,10 @@ export type FontsType = {
 
 export type LinkType = {
   [link in 'label' | 'link']: string;
+};
+
+export type RWDTypographyType = {
+  [type in 'desktop' | 'mobile']: TypographyType;
 };
 
 export type TypographySettingsType = {

@@ -1,14 +1,18 @@
 import 'styled-components';
 import {
-  BaseThemeType, ColorThemeType, CommonThemeType, TypographyType
+  BackgroundThemeType,
+  BaseThemeType, ColorThemeType, CommonThemeType, RWDTypographyType
 } from './src/types/common';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     common: CommonThemeType,
+    hamburger: BackgroundThemeType,
     header: BaseThemeType & {
-      font: TypographyType
-      border: string;
+      font: RWDTypographyType
+      border: {
+        [border in 'bottom' | 'inactive']: string;
+      };
     },
     logo: ColorThemeType
   }
