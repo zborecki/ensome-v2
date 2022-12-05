@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderRoot = styled.header`
-  background: yellowgreen; // ${({ theme: { header } }) => header.background};
+  background: ${({ theme: { header } }) => header.background};
+  border-bottom: 1px solid ${({ theme: { header } }) => header.border};
 
   .header {
     &__navigation {
@@ -47,6 +48,7 @@ export const HeaderRoot = styled.header`
       display: flex;
       padding: 40px;
       justify-content: space-between;
+      align-items: center;
     }
   }
 `;

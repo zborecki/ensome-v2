@@ -4,6 +4,7 @@ import { Wrapper } from '../styled.components';
 import { HeaderRoot } from './header.style';
 import dictionary from '../../data/dictionary';
 import { links } from '../../data/variables';
+import Logo from '../Logo';
 
 const { navigation } = dictionary;
 const navigationItems: LinkType[] = [
@@ -32,7 +33,7 @@ const navigationItems: LinkType[] = [
 const Header = (): JSX.Element => (
   <HeaderRoot className="header">
     <Wrapper className="header__wrapper">
-      <div>Ensome logo</div>
+      <Logo className="header__logo" />
       <nav className="header__navigation">
         <ul className="navigation__list">
           {

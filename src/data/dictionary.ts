@@ -1,4 +1,7 @@
 export default {
+  logo: {
+    companyName: 'Ensome'
+  },
   navigation: {
     home: 'Home',
     services: 'Services',

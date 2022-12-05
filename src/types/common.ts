@@ -2,17 +2,19 @@ export type BackgroundThemeType = {
   background: string;
 };
 
-export type BaseThemeType = BackgroundThemeType & {
-  color: string;
-};
+export type BaseThemeType = BackgroundThemeType & ColorThemeType;
 
 type BaseTypographyType = {
   fontSize: string;
   fontWeight: number;
 };
 
+export type ColorThemeType = {
+  color: string;
+};
+
 export type ColorsType = {
-  [color in 'aliceBlue' | 'prussianBlue' | 'white']: string;
+  [color in 'aliceBlue' | 'prussianBlue' | 'white' | 'indigo']: string;
 };
 
 export type CommonThemeType = BackgroundThemeType & {
