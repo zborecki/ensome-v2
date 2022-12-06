@@ -17,9 +17,14 @@ export type ColorsType = {
   [color in 'aliceBlue' | 'prussianBlue' | 'white' | 'indigo' | 'steelTeal']: string;
 };
 
-export type CommonThemeType = BackgroundThemeType & {
-  paragraph: string;
+export type CommonThemeType = BackgroundThemeType & FontSettingsType & {
   borderRadius: string;
+};
+
+type FontSettingsType = {
+  [text in 'headline' | 'paragraph']: {
+    [attribute in 'fontFamily' | 'color']: string;
+  }
 };
 
 export type FontsType = {

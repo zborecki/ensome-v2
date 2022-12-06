@@ -4,6 +4,7 @@ import 'normalize.css';
 import GlobalStyles from './theme/global.styles';
 import theme from './theme';
 import Layout from './routes/Layout';
+import Home from './routes/Home';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div>Home</div>
+        element: <Home />
       },
       {
         path: '*',

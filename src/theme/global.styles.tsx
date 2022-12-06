@@ -6,7 +6,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme: { common } }) => common.paragraph}, sans-serif;
+    font-family: ${({ theme: { common: { paragraph } } }) => paragraph.fontFamily}, sans-serif;
     background: ${({ theme: { common } }) => common.background};
   }
 `;

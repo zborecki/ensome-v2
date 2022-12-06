@@ -22,7 +22,7 @@ export const HeaderRoot = styled.header<{
     &__wrapper {
       position: relative;
       display: flex;
-      padding: 40px;
+      padding: 40px 0px;
       justify-content: space-between;
       align-items: center;
 
@@ -44,6 +44,7 @@ export const Navigation = styled.nav<{
     &__link {
       position: relative;
       text-decoration: none;
+      font-family: ${({ theme: { common } }) => common.headline}, sans-serif;
       color: ${({ theme: { header } }) => header.color};
       font-size: ${({ theme: { header: { font: { desktop } } } }) => desktop.fontSize};
       font-weight: ${({ theme: { header: { font: { desktop } } } }) => desktop.fontWeight};

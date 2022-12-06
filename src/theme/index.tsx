@@ -2,7 +2,7 @@ import { DefaultTheme } from 'styled-components';
 import { ColorsType, FontsType } from '../types/common';
 import typography from './typography';
 
-const { headline } = typography;
+const { headline, paragraph } = typography;
 
 const colors: ColorsType = {
   aliceBlue: '#F1F6FA',
@@ -21,7 +21,14 @@ export default {
   common: {
     background: colors.aliceBlue,
     borderRadius: '6px',
-    paragraph: fonts.openSans
+    paragraph: {
+      fontFamily: fonts.openSans,
+      color: 'red'
+    },
+    headline: {
+      fontFamily: fonts.manrope,
+      color: 'yellow'
+    }
   },
   hamburger: {
     background: colors.white
@@ -38,7 +45,17 @@ export default {
       mobile: headline.h6
     }
   },
+  headline: {
+    h1: headline.h1
+  },
+  hero: {
+    background: colors.prussianBlue,
+    color: colors.white
+  },
   logo: {
     color: colors.white
+  },
+  paragraph: {
+    'p2-regular': paragraph['p2-regular']
   }
 } as DefaultTheme;
