@@ -4,12 +4,7 @@ export interface BaseProps {
   className: string;
 }
 
-export interface HamburgerProps extends BaseProps {
-  onClick: () => void;
-  isOpened: boolean;
-}
-
-export interface HeaderProps {
+export interface MobileProps {
   onClick: () => void;
   isOpened: boolean;
 }

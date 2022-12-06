@@ -1,7 +1,7 @@
-import { HamburgerProps } from '../../types/props';
+import { MobileProps, BaseProps } from '../../types/props';
 import { HamburgerRoot } from './hamburger.style';
 
-const Hamburger = ({ className, onClick, isOpened }: HamburgerProps): JSX.Element => (
+const Hamburger = ({ className, onClick, isOpened }: MobileProps & BaseProps): JSX.Element => (
   <HamburgerRoot
     className={className}
     onClick={onClick}

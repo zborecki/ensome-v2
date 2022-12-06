@@ -5,7 +5,7 @@ import { HeaderRoot, Navigation } from './header.style';
 import dictionary from '../../data/dictionary';
 import { links } from '../../data/variables';
 import Logo from '../Logo';
-import { HeaderProps } from '../../types/props';
+import { MobileProps } from '../../types/props';
 import Hamburger from '../Hamburger';
 
 const { navigation } = dictionary;
@@ -32,7 +32,7 @@ const navigationItems: LinkType[] = [
   }
 ];
 
-const Header = ({ isOpened, onClick }: HeaderProps): JSX.Element => (
+const Header = ({ isOpened, onClick }: MobileProps): JSX.Element => (
   <HeaderRoot
     className="header"
     isOpened={isOpened}
