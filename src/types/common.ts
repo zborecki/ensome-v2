@@ -9,6 +9,23 @@ type BaseTypographyType = {
   fontWeight: number;
 };
 
+export type ButtonThemeType = {
+  background: {
+    [background in 'secondary']: ButtonStateType;
+  },
+  color: {
+    [color in 'secondary']: ButtonStateType;
+  },
+  padding: {
+    [padding in 'standard' | 'small']: string;
+  },
+  font: {
+    fontFamily: string;
+  } & {
+    [font in 'standard']: TypographyType;
+  }
+};
+
 export type ColorThemeType = {
   color: string;
 };
@@ -37,6 +54,10 @@ export type LinkType = {
 
 export type RWDTypographyType = {
   [type in 'desktop' | 'mobile']: TypographyType;
+};
+
+type ButtonStateType = {
+  [state in 'enabled' | 'hovered']: string;
 };
 
 export type TypographySettingsType = {

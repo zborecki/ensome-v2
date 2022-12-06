@@ -3,14 +3,16 @@ import { SectionProps } from '../../types/props';
 import { Headline, Paragraph, Wrapper } from '../styled.components';
 import { HeroRoot } from './hero.style';
 
-const Hero = ({ headline, description, children }: SectionProps): JSX.Element => {
+const Hero = ({
+  headline, description, children, className
+}: SectionProps): JSX.Element => {
   const { hero } = useTheme();
 
   return (
-    <HeroRoot className="hero">
-      <Wrapper className="hero__wrapper">
+    <HeroRoot className={className}>
+      <Wrapper className={`${className}__wrapper`}>
         <Headline
-          className="hero__headline"
+          className={`${className}__headline`}
           color={hero.color}
           variant="h1"
         >
@@ -18,17 +20,17 @@ const Hero = ({ headline, description, children }: SectionProps): JSX.Element =>
         </Headline>
         {
           description && (
-            <div className="hero__panel">
+            <div className={`${className}__panel`}>
               <Paragraph
                 color={hero.color}
                 variant="p2-regular"
-                className="hero__paragraph"
+                className={`${className}__paragraph`}
               >
                 { description }
               </Paragraph>
               {
                 children && (
-                  <div className="hero__interaction">
+                  <div className={`${className}__interaction`}>
                     { children }
                   </div>
                 )

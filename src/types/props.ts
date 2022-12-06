@@ -1,7 +1,20 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { LinkType } from './common';
 
 export interface BaseProps {
   className: string;
+}
+
+export interface ButtonProps extends BaseProps, ButtonRootProps {
+  children: string;
+  link: string;
+}
+
+export interface ButtonRootProps {
+  variant?: 'secondary';
+  size?: 'standard';
+  icon?: IconDefinition;
+  type?: 'outlined' | 'filled';
 }
 
 export interface HeadlineProps extends BaseProps {
@@ -23,8 +36,8 @@ export interface ParagraphProps extends BaseProps {
   color?: string;
 }
 
-export interface SectionProps {
+export interface SectionProps extends BaseProps {
   headline: string;
   description?: string;
-  children?: JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 }

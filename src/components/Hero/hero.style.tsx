@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const HeroRoot = styled.div`
-  background: yellowgreen;
+  background: ${({ theme: { hero } }) => hero.background};
 `;

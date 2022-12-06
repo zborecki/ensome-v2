@@ -1,4 +1,8 @@
 export default {
+  button: {
+    learnMore: 'Learn more',
+    watchTheDemo: 'Watch the demo'
+  },
   logo: {
     companyName: 'Ensome'
   },

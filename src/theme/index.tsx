@@ -18,6 +18,28 @@ const fonts: FontsType = {
 };
 
 export default {
+  button: {
+    background: {
+      secondary: {
+        enabled: colors.white,
+        hovered: colors.aliceBlue
+      }
+    },
+    color: {
+      secondary: {
+        enabled: colors.prussianBlue,
+        hovered: colors.indigo
+      }
+    },
+    font: {
+      fontFamily: fonts.manrope,
+      standard: headline.h6
+    },
+    padding: {
+      standard: '16px 52px',
+      small: '10px 26px'
+    }
+  },
   common: {
     background: colors.aliceBlue,
     borderRadius: '6px',
