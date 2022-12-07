@@ -26,6 +26,10 @@ export const HeaderRoot = styled.header<{
       justify-content: space-between;
       align-items: center;
 
+      @media screen and (max-width: 1200px) {
+        padding: 40px 16px;
+      }
+
       @media screen and (max-width: 992px) {
         padding: 20px 16px;
         flex-direction: column;

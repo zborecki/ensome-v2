@@ -15,4 +15,8 @@ export const Paragraph = styled.p<ParagraphProps>`
 export const Wrapper = styled.div`
   max-width: 1110px;
   margin: 0 auto;
+
+  @media screen and (max-width: 992px) {
+    padding: 0px 16px;
+  }
 `;

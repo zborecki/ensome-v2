@@ -10,9 +10,9 @@ const Hero = ({
 
   return (
     <HeroRoot className={className}>
-      <Wrapper className={`${className}__wrapper`}>
+      <Wrapper className={`hero__wrapper ${className}__wrapper`}>
         <Headline
-          className={`${className}__headline`}
+          className={`hero__headline ${className}__headline`}
           color={hero.color}
           variant="h1"
         >
@@ -20,17 +20,17 @@ const Hero = ({
         </Headline>
         {
           description && (
-            <div className={`${className}__panel`}>
+            <div className={`hero__panel ${className}__panel`}>
               <Paragraph
                 color={hero.color}
                 variant="p2-regular"
-                className={`${className}__paragraph`}
+                className={`hero__paragraph ${className}__paragraph`}
               >
                 { description }
               </Paragraph>
               {
                 children && (
-                  <div className={`${className}__interaction`}>
+                  <div className={`hero__interaction ${className}__interaction`}>
                     { children }
                   </div>
                 )
