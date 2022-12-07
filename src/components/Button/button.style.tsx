@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ButtonRootProps } from '../../types/props';
