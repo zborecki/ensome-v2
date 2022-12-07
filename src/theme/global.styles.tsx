@@ -21,7 +21,7 @@ export default createGlobalStyle`
       }
 
       &--filled {
-        padding: 11px 46px;
+        padding: 11px 46px !important;
       }
     }
   }
