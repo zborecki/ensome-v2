@@ -1,4 +1,6 @@
+import { css } from 'styled-components';
 import { TypographySettingsType } from '../types/common';
+import { HeadlineProps, ParagraphProps } from '../types/props';
 
 enum FontWeight {
   Regular = 400,
@@ -7,6 +9,39 @@ enum FontWeight {
   Bold = 700,
   Extrabold = 800
 }
+
+export const HeadlineSettings = css<HeadlineProps>`
+  color: ${({ color, theme: { common: { headline } } }) => (color || headline.color)};
+  font-family: ${({ theme: { common: { headline } } }) => headline.fontFamily}, sans-serif;
+  font-size: ${({ variant, theme: { headline } }) => (
+    (variant === 'h1' && headline.h1.fontSize)
+  )};
+  font-weight: ${({ variant, theme: { headline } }) => (
+    (variant === 'h1' && headline.h1.fontWeight)
+  )};
+  line-height: ${({ variant, theme: { headline } }) => (
+    (variant === 'h1' && headline.h1.lineHeight)
+  )};
+  letter-spacing: ${({ variant, theme: { headline } }) => (
+    (variant === 'h1' && headline.h1.letterSpacing)
+  )};
+`;
+
+export const ParagraphSettings = css<ParagraphProps>`
+  color: ${({ color, theme: { common: { paragraph } } }) => (color || paragraph.color)};
+  font-size: ${({ variant, theme: { paragraph } }) => (
+    (variant === 'p2-regular' && paragraph['p2-regular'].fontSize)
+  )};
+  font-weight: ${({ variant, theme: { paragraph } }) => (
+    (variant === 'p2-regular' && paragraph['p2-regular'].fontWeight)
+  )};
+  line-height: ${({ variant, theme: { paragraph } }) => (
+    (variant === 'p2-regular' && paragraph['p2-regular'].lineHeight)
+  )};
+  letter-spacing: ${({ variant, theme: { paragraph } }) => (
+    (variant === 'p2-regular' && paragraph['p2-regular'].letterSpacing)
+  )};
+`;
 
 const typography: TypographySettingsType = {
   headline: {

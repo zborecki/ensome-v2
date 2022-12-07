@@ -1,12 +1,18 @@
 import 'styled-components';
 import {
   BackgroundThemeType,
-  BaseThemeType, ColorThemeType, CommonThemeType, RWDTypographyType
+  BaseThemeType,
+  ButtonThemeType,
+  ColorThemeType,
+  CommonThemeType,
+  RWDTypographyType,
+  TypographySettingsType
 } from './src/types/common';
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
+  export interface DefaultTheme extends TypographySettingsType {
     common: CommonThemeType,
+    button: ButtonThemeType
     hamburger: BackgroundThemeType,
     header: BaseThemeType & {
       font: RWDTypographyType
@@ -14,6 +20,7 @@ declare module 'styled-components' {
         [border in 'bottom' | 'inactive']: string;
       };
     },
+    hero: BaseThemeType
     logo: ColorThemeType
   }
 }
