@@ -10,6 +10,14 @@ export default createGlobalStyle`
     background: ${({ theme: { common } }) => common.background};
   }
 
+  section {
+    padding: 120px 0px;
+
+    @media screen and (max-width: 992px) {
+      padding: 50px 0px;
+    }
+  }
+
   .home-hero {
     &__button {
       .button {
