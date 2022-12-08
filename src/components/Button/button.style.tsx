@@ -1,33 +1,27 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ButtonRootProps } from '../../types/props';
 
-export const ButtonRoot = styled(Link)<ButtonRootProps>`
-  // Common settings
-  display: inline-block;
-  text-decoration: none;
-  border-radius: ${({ theme: { common } }) => common.borderRadius};
-  font-family: ${({ theme: { button: { font } } }) => `${font.fontFamily}, sans-serif`};
-  transition: background .3s ease-out, color .3s ease-out;
-
-  // Variants
-  background: ${({ variant, type, theme: { button: { background, color } } }) => (
-    ((variant === 'secondary' && type === 'outlined') && color.secondary.enabled)
-    || ((variant === 'secondary' && (!type || type === 'filled')) && background.secondary.enabled)
+const ButtonHoverState = css<ButtonRootProps>`
+  background: ${({ variant, type, theme: { button: { background: { secondary, primary } } } }) => (
+    (variant === 'primary' && primary.hovered)
+    || ((variant === 'secondary' && (!type || type === 'filled')) && secondary.hovered)
   )};
-  color:  ${({ variant, type, theme: { button: { color, background } } }) => (
-    ((variant === 'secondary' && type === 'outlined') && background.secondary.enabled)
-    || ((variant === 'secondary' && (!type || type === 'filled')) && color.secondary.enabled)
+  color: ${({ variant, type, theme: { button: { color, background } } }) => (
+    (variant === 'primary' && color.primary.hovered)
+      || ((variant === 'secondary' && type === 'outlined') && background.secondary.hovered)
+      || ((variant === 'secondary' && (!type || type === 'filled')) && color.secondary.hovered)
   )};
-  border: ${({ type }) => (type === 'outlined' ? '1px solid' : undefined)};
+`;
 
-  // With an icon
+const ButtonIconSettings = css<ButtonRootProps>`
   display: ${({ icon }) => (icon ? 'flex' : undefined)};
   align-items: ${({ icon }) => (icon ? 'center' : undefined)};
   width: ${({ icon }) => (icon ? 'fit-content' : undefined)};
   gap: ${({ icon }) => (icon ? '10px' : undefined)};
+`;
 
-  // Sizes
+const ButtonSizes = css<ButtonRootProps>`
   padding: ${({ size, icon, theme: { button: { padding } } }) => (
     (icon && padding.small)
     || ((size === 'standard' || !size) && padding.standard)
@@ -44,15 +38,38 @@ export const ButtonRoot = styled(Link)<ButtonRootProps>`
   letter-spacing: ${({ size, theme: { button: { font: { standard } } } }) => (
     ((size === 'standard' || !size) && standard.letterSpacing)
   )};
+`;
+
+const ButtonVariants = css<ButtonRootProps>`
+  background: ${({ variant, type, theme: { button: { background, color } } }) => (
+    ((variant === 'secondary' && type === 'outlined') && color.secondary.enabled)
+    || (variant === 'primary' && background.primary.enabled)
+    || ((variant === 'secondary' && (!type || type === 'filled')) && background.secondary.enabled)
+  )};
+  color:  ${({ variant, type, theme: { button: { color, background } } }) => (
+    (variant === 'primary' && color.primary.enabled)
+    || ((variant === 'secondary' && type === 'outlined') && background.secondary.enabled)
+    || ((variant === 'secondary' && (!type || type === 'filled')) && color.secondary.enabled)
+  )};
+  border: ${({ type }) => (type === 'outlined' ? '1px solid' : undefined)};
+  box-shadow: ${({ shadow, theme: { button } }) => (shadow ? `0px 12px 30px 0px ${button.shadow}` : undefined)};
+`;
+
+export const ButtonRoot = styled(Link)<ButtonRootProps>`
+  // Common settings
+  display: inline-block;
+  text-decoration: none;
+  border-radius: ${({ theme: { common } }) => common.borderRadius};
+  font-family: ${({ theme: { button: { font } } }) => `${font.fontFamily}, sans-serif`};
+  transition: background .3s ease-out, color .3s ease-out;
+
+  // Other settings
+  ${ButtonVariants}
+  ${ButtonIconSettings}
+  ${ButtonSizes}
 
   &:hover {
-    background: ${({ variant, type, theme: { button: { background: { secondary } } } }) => (
-    ((variant === 'secondary' && (!type || type === 'filled')) && secondary.hovered)
-  )};
-    color: ${({ variant, type, theme: { button: { color, background } } }) => (
-    ((variant === 'secondary' && type === 'outlined') && background.secondary.hovered)
-      || ((variant === 'secondary' && (!type || type === 'filled')) && color.secondary.hovered)
-  )};
+    ${ButtonHoverState}
   }
 
   .button {

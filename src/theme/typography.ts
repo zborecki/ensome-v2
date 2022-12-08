@@ -15,31 +15,56 @@ export const HeadlineSettings = css<HeadlineProps>`
   font-family: ${({ theme: { common: { headline } } }) => headline.fontFamily}, sans-serif;
   font-size: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontSize)
+    || (variant === 'h2' && headline.h2.fontSize)
   )};
   font-weight: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontWeight)
+    || (variant === 'h2' && headline.h2.fontWeight)
   )};
   line-height: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.lineHeight)
+    || (variant === 'h2' && headline.h2.lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.letterSpacing)
+    || (variant === 'h2' && headline.h2.letterSpacing)
   )};
+`;
+
+export const UnderlinedHeadline = css<HeadlineProps>`
+  position: relative;
+
+  ${({ underlined, theme: { common: { headline } } }) => (underlined ? `
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      bottom: -14px;
+      display: block;
+      background: ${headline.border};
+      height: 4px;
+      width: 94px;
+    }
+  ` : undefined)};
 `;
 
 export const ParagraphSettings = css<ParagraphProps>`
   color: ${({ color, theme: { common: { paragraph } } }) => (color || paragraph.color)};
   font-size: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].fontSize)
+    || (variant === 'p1' && paragraph.p1.fontSize)
   )};
   font-weight: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].fontWeight)
+    || (variant === 'p1' && paragraph.p1.fontWeight)
   )};
   line-height: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].lineHeight)
+    || (variant === 'p1' && paragraph.p1.lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].letterSpacing)
+    || (variant === 'p1' && paragraph.p1.letterSpacing)
   )};
 `;
 

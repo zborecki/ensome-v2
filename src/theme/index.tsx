@@ -6,8 +6,12 @@ const { headline, paragraph } = typography;
 
 const colors: ColorsType = {
   aliceBlue: '#F1F6FA',
+  blue: '#185CFF',
+  blueberry: '#467DFF',
+  gunmetal: '#292D33',
   indigo: '#194060',
   prussianBlue: '#002B4E',
+  spanishGray: '#9497A1',
   steelTeal: '#607D94',
   white: '#FFFFFF'
 };
@@ -19,16 +23,25 @@ const fonts: FontsType = {
 
 export default {
   button: {
+    shadow: 'rgba(24, 92, 255, 0.18)',
     background: {
       secondary: {
         enabled: colors.white,
         hovered: colors.aliceBlue
+      },
+      primary: {
+        enabled: colors.blue,
+        hovered: colors.blueberry
       }
     },
     color: {
       secondary: {
         enabled: colors.prussianBlue,
         hovered: colors.indigo
+      },
+      primary: {
+        enabled: colors.white,
+        hovered: colors.white
       }
     },
     font: {
@@ -45,11 +58,12 @@ export default {
     borderRadius: '6px',
     paragraph: {
       fontFamily: fonts.openSans,
-      color: 'red'
+      color: colors.spanishGray
     },
     headline: {
       fontFamily: fonts.manrope,
-      color: 'yellow'
+      color: colors.gunmetal,
+      border: colors.blue
     }
   },
   hamburger: {
@@ -68,7 +82,8 @@ export default {
     }
   },
   headline: {
-    h1: headline.h1
+    h1: headline.h1,
+    h2: headline.h2
   },
   hero: {
     background: colors.prussianBlue,
@@ -78,6 +93,7 @@ export default {
     color: colors.white
   },
   paragraph: {
+    p1: paragraph.p1,
     'p2-regular': paragraph['p2-regular']
   }
 } as DefaultTheme;

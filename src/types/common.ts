@@ -10,11 +10,12 @@ type BaseTypographyType = {
 };
 
 export type ButtonThemeType = {
+  shadow : string,
   background: {
-    [background in 'secondary']: ButtonStateType;
+    [background in 'secondary' | 'primary']: ButtonStateType;
   },
   color: {
-    [color in 'secondary']: ButtonStateType;
+    [color in 'secondary' | 'primary']: ButtonStateType;
   },
   padding: {
     [padding in 'standard' | 'small']: string;
@@ -31,15 +32,34 @@ export type ColorThemeType = {
 };
 
 export type ColorsType = {
-  [color in 'aliceBlue' | 'prussianBlue' | 'white' | 'indigo' | 'steelTeal']: string;
+  [color in
+  'aliceBlue'
+  | 'prussianBlue'
+  | 'white'
+  | 'indigo'
+  | 'steelTeal'
+  | 'gunmetal'
+  | 'blue'
+  | 'spanishGray'
+  | 'blueberry'
+  ]: string;
 };
 
 export type CommonThemeType = BackgroundThemeType & FontSettingsType & {
   borderRadius: string;
 };
 
+export type FeatureType = {
+  [props in 'headline' | 'description' | 'button' | 'image' | 'link']: string;
+};
+
 type FontSettingsType = {
-  [text in 'headline' | 'paragraph']: {
+  headline: {
+    border: string;
+  } & {
+    [attribute in 'fontFamily' | 'color']: string;
+  },
+  paragraph: {
     [attribute in 'fontFamily' | 'color']: string;
   }
 };

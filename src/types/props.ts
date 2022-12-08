@@ -11,16 +11,23 @@ export interface ButtonProps extends BaseProps, ButtonRootProps {
 }
 
 export interface ButtonRootProps {
-  variant?: 'secondary';
+  variant?: 'secondary' | 'primary';
   size?: 'standard';
   icon?: IconDefinition;
   type?: 'outlined' | 'filled';
+  shadow?: boolean;
 }
 
 export interface HeadlineProps extends BaseProps {
-  variant: 'h1';
+  variant: 'h1' | 'h2';
   color?: string;
+  underlined?: boolean;
 }
+
+export type ImageProps = {
+  parent: string;
+  width: number;
+} & LinkType;
 
 export interface MobileProps {
   onClick: () => void;
@@ -32,7 +39,7 @@ export interface NavigationProps extends BaseProps {
 }
 
 export interface ParagraphProps extends BaseProps {
-  variant: 'p2-regular';
+  variant: 'p2-regular' | 'p1';
   color?: string;
 }
 

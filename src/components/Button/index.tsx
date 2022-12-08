@@ -3,7 +3,7 @@ import { ButtonProps } from '../../types/props';
 import { ButtonRoot } from './button.style';
 
 const Button = ({
-  className, icon, children, link, variant, size, type
+  className, icon, children, link, variant, size, type, shadow
 }: ButtonProps): JSX.Element => (
   <ButtonRoot
     className={className}
@@ -12,6 +12,7 @@ const Button = ({
     size={size}
     icon={icon}
     type={type}
+    shadow={shadow}
   >
     {
       icon && (

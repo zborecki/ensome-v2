@@ -52,8 +52,11 @@ export const HeroRoot = styled.div`
         flex-direction: column;
       }
 
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 854px) {
         padding: 24px 16px;
+      }
+
+      @media screen and (max-width: 576px) {
         gap: 20px;
       }
     }
