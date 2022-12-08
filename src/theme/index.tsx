@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 import { ColorsType, FontsType } from '../types/common';
-import typography from './typography';
+import typography, { overviewFont } from './typography';
 
 const { headline, paragraph } = typography;
 
@@ -83,7 +83,8 @@ export default {
   },
   headline: {
     h1: headline.h1,
-    h2: headline.h2
+    h2: headline.h2,
+    'h7-semibold': headline['h7-semibold']
   },
   hero: {
     background: colors.prussianBlue,
@@ -95,5 +96,15 @@ export default {
   paragraph: {
     p1: paragraph.p1,
     'p2-regular': paragraph['p2-regular']
+  },
+  overview: {
+    background: colors.white,
+    value: {
+      color: colors.blue,
+      fontSize: overviewFont.fontSize,
+      fontWeight: overviewFont.fontWeight,
+      lineHeight: overviewFont.lineHeight,
+      letterSpacing: overviewFont.letterSpacing
+    }
   }
 } as DefaultTheme;

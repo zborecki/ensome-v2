@@ -72,6 +72,10 @@ export type LinkType = {
   [link in 'label' | 'link']: string;
 };
 
+export type OverviewType = {
+  [type in 'value' | 'label']: string;
+};
+
 export type RWDTypographyType = {
   [type in 'desktop' | 'mobile']: TypographyType;
 };

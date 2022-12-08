@@ -28,5 +28,8 @@ export default {
     blog: 'Blog',
     faq: 'FAQ',
     contacts: 'Contacts'
+  },
+  overview: {
+    headline: 'Ensome in numbers'
   }
 };

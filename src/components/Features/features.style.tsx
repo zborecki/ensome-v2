@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const FeaturesRoot = styled.section`
-  background-color: white;
-
   .feature {
     &__headline {
       margin-bottom: 45px;

@@ -6,7 +6,8 @@ import {
   ColorThemeType,
   CommonThemeType,
   RWDTypographyType,
-  TypographySettingsType
+  TypographySettingsType,
+  TypographyType
 } from './src/types/common';
 
 declare module 'styled-components' {
@@ -22,5 +23,8 @@ declare module 'styled-components' {
     },
     hero: BaseThemeType
     logo: ColorThemeType
+    overview: BackgroundThemeType & {
+      value: TypographyType & ColorThemeType
+    }
   }
 }
