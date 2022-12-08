@@ -2,6 +2,7 @@ import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
 import Button from '../../components/Button';
 import Features from '../../components/Features';
 import Hero from '../../components/Hero';
+import Overview from '../../components/Overview';
 import dictionary from '../../data/dictionary';
 import { ButtonProps } from '../../types/props';
 
@@ -49,7 +50,7 @@ const Home = (): JSX.Element => (
       }
     </Hero>
     <Features className="home-features" />
-    <div />
+    <Overview />
   </>
 );
 

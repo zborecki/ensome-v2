@@ -1,4 +1,4 @@
-import { FeatureType } from '../types/common';
+import { FeatureType, OverviewType } from '../types/common';
 import dictionary from './dictionary';
 import platformImage from '../assets/platform.png';
 import newSolutionsImage from '../assets/new-solutions.png';
@@ -29,3 +29,22 @@ export const links = {
   faq: 'faq',
   contacts: 'contacts'
 };
+
+export const overviews: OverviewType[] = [
+  {
+    label: 'Data analytics performed by Ensome',
+    value: '220'
+  },
+  {
+    label: 'Data management performed by Ensome',
+    value: '390'
+  },
+  {
+    label: "Customers are satisfied with Ensome's work",
+    value: '834+'
+  },
+  {
+    label: 'Projects implemented by Ensome',
+    value: '1830+'
+  }
+];
