@@ -32,19 +32,19 @@ export const links = {
 
 export const overviews: OverviewType[] = [
   {
-    label: 'Data analytics performed by Ensome',
+    label: 'Data analytics',
     value: '220'
   },
   {
-    label: 'Data management performed by Ensome',
+    label: 'Data management',
     value: '390'
   },
   {
-    label: "Customers are satisfied with Ensome's work",
+    label: 'Satisfied customers',
     value: '834+'
   },
   {
-    label: 'Projects implemented by Ensome',
+    label: 'Implemented projects',
     value: '1830+'
   }
 ];

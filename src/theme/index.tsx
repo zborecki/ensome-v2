@@ -84,7 +84,8 @@ export default {
   headline: {
     h1: headline.h1,
     h2: headline.h2,
-    'h7-semibold': headline['h7-semibold']
+    'h7-semibold': headline['h7-semibold'],
+    h6: headline.h6
   },
   hero: {
     background: colors.prussianBlue,
@@ -106,5 +107,8 @@ export default {
       lineHeight: overviewFont.lineHeight,
       letterSpacing: overviewFont.letterSpacing
     }
+  },
+  review: {
+    background: colors.white
   }
 } as DefaultTheme;

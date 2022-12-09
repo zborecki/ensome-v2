@@ -8,15 +8,19 @@ export const OverviewRoot = styled.section`
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       column-gap: 98px;
+      text-align: center;
 
       @media screen and (max-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
         gap: 50px;
       }
 
       @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -31,6 +35,10 @@ export const OverviewRoot = styled.section`
       line-height: ${({ theme: { overview: { value } } }) => value.lineHeight};
       letter-spacing: ${({ theme: { overview: { value } } }) => value.letterSpacing};
       color: ${({ theme: { overview: { value } } }) => value.color};
+
+      @media screen and (max-width: 992px) {
+        font-size: 55px;
+      }
     }
   }
 
