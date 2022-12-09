@@ -16,12 +16,14 @@ export const HeadlineSettings = css<HeadlineProps>`
   font-size: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontSize)
     || (variant === 'h2' && headline.h2.fontSize)
+    || (variant === 'h4' && headline.h4.fontSize)
     || (variant === 'h6' && headline.h6.fontSize)
     || (variant === 'h7-semibold' && headline['h7-semibold'].fontSize)
   )};
   font-weight: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontWeight)
     || (variant === 'h2' && headline.h2.fontWeight)
+    || (variant === 'h4' && headline.h4.fontWeight)
     || (variant === 'h6' && headline.h6.fontWeight)
     || (variant === 'h7-semibold' && headline['h7-semibold'].fontWeight)
   )};
@@ -29,12 +31,14 @@ export const HeadlineSettings = css<HeadlineProps>`
     (variant === 'h1' && headline.h1.lineHeight)
     || (variant === 'h2' && headline.h2.lineHeight)
     || (variant === 'h6' && headline.h6.lineHeight)
+    || (variant === 'h4' && headline.h4.lineHeight)
     || (variant === 'h7-semibold' && headline['h7-semibold'].lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.letterSpacing)
     || (variant === 'h2' && headline.h2.letterSpacing)
     || (variant === 'h6' && headline.h6.letterSpacing)
+    || (variant === 'h4' && headline.h4.letterSpacing)
     || (variant === 'h7-semibold' && headline['h7-semibold'].letterSpacing)
   )};
 `;
@@ -61,18 +65,22 @@ export const ParagraphSettings = css<ParagraphProps>`
   font-size: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].fontSize)
     || (variant === 'p1' && paragraph.p1.fontSize)
+    || (variant === 'p3-regular' && paragraph['p3-regular'].fontSize)
   )};
   font-weight: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].fontWeight)
     || (variant === 'p1' && paragraph.p1.fontWeight)
+    || (variant === 'p3-regular' && paragraph['p3-regular'].fontWeight)
   )};
   line-height: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].lineHeight)
     || (variant === 'p1' && paragraph.p1.lineHeight)
+    || (variant === 'p3-regular' && paragraph['p3-regular'].lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { paragraph } }) => (
     (variant === 'p2-regular' && paragraph['p2-regular'].letterSpacing)
     || (variant === 'p1' && paragraph.p1.letterSpacing)
+    || (variant === 'p3-regular' && paragraph['p3-regular'].letterSpacing)
   )};
 `;
 

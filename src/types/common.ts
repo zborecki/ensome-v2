@@ -100,3 +100,7 @@ export type TypographySettingsType = {
 export type TypographyType = BaseTypographyType & {
   [typography in 'lineHeight' | 'letterSpacing']?: string;
 };
+
+export type PostType = {
+  [data in 'image' | 'date' | 'headline' | 'link']: string;
+};
