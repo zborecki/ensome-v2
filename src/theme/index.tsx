@@ -91,6 +91,15 @@ export default {
     h6: headline.h6,
     h4: headline.h4
   },
+  footer: {
+    background: colors.prussianBlue,
+    color: colors.white,
+    border: colors.steelTeal
+  },
+  error: {
+    code: colors.blue,
+    information: colors.white
+  },
   hero: {
     background: colors.prussianBlue,
     color: colors.white

@@ -27,6 +27,12 @@ declare module 'styled-components' {
       value: TypographyType & ColorThemeType
     },
     review: BackgroundThemeType,
-    blog: BackgroundThemeType
+    blog: BackgroundThemeType,
+    footer: BaseThemeType & {
+      border: string;
+    },
+    error: {
+      [type in 'code' | 'information']: string;
+    }
   }
 }

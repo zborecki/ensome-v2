@@ -7,7 +7,7 @@ export default createGlobalStyle`
 
   body {
     font-family: ${({ theme: { common: { paragraph } } }) => paragraph.fontFamily}, sans-serif;
-    background: ${({ theme: { common } }) => common.background};
+    background: ${({ theme: { header } }) => header.background};
   }
 
   section {
@@ -16,6 +16,10 @@ export default createGlobalStyle`
     @media screen and (max-width: 992px) {
       padding: 50px 0px;
     }
+  }
+
+  footer {
+    padding: 50px 0px 30px 0px;
   }
 
   .home-hero {

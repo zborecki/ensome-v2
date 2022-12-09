@@ -1,7 +1,8 @@
 export default {
   button: {
     learnMore: 'Learn more',
-    watchTheDemo: 'Watch the demo'
+    watchTheDemo: 'Watch the demo',
+    returnToHome: 'Return to home'
   },
   logo: {
     companyName: 'Ensome'
@@ -37,5 +38,21 @@ export default {
   },
   blog: {
     headline: 'Ensome blog'
+  },
+  footer: {
+    description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.',
+    copyrights: 'Ensome© 2022 All Rights Reserved',
+    privacy: 'Privacy policy',
+    terms: 'Terms of use'
+  },
+  contact: {
+    headline: 'Contact',
+    email: 'say@hello.ensome',
+    address: '1642 Washington Avenue, Jackson, MS, Mississippi, 39201'
+  },
+  error404: {
+    code: '404',
+    information: 'Page not found.',
+    description: "The page you are looking for doesn't exist or has been moved. Please go back to the homepage."
   }
 };

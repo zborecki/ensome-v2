@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const FeaturesRoot = styled.section`
+  background: ${({ theme: { common } }) => common.background};
+
   .feature {
     &__headline {
       margin-bottom: 45px;
