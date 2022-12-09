@@ -76,6 +76,10 @@ export type OverviewType = {
   [type in 'value' | 'label']: string;
 };
 
+export type ReviewType = {
+  [data in 'avatar' | 'fullName' | 'occupation' | 'quote']: string
+};
+
 export type RWDTypographyType = {
   [type in 'desktop' | 'mobile']: TypographyType;
 };

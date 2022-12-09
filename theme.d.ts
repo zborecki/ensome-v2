@@ -25,6 +25,7 @@ declare module 'styled-components' {
     logo: ColorThemeType
     overview: BackgroundThemeType & {
       value: TypographyType & ColorThemeType
-    }
+    },
+    review: BackgroundThemeType
   }
 }

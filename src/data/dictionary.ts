@@ -31,5 +31,8 @@ export default {
   },
   overview: {
     headline: 'Ensome in numbers'
+  },
+  reviews: {
+    headline: 'What our customers say'
   }
 };

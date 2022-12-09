@@ -16,21 +16,25 @@ export const HeadlineSettings = css<HeadlineProps>`
   font-size: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontSize)
     || (variant === 'h2' && headline.h2.fontSize)
+    || (variant === 'h6' && headline.h6.fontSize)
     || (variant === 'h7-semibold' && headline['h7-semibold'].fontSize)
   )};
   font-weight: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.fontWeight)
     || (variant === 'h2' && headline.h2.fontWeight)
+    || (variant === 'h6' && headline.h6.fontWeight)
     || (variant === 'h7-semibold' && headline['h7-semibold'].fontWeight)
   )};
   line-height: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.lineHeight)
     || (variant === 'h2' && headline.h2.lineHeight)
+    || (variant === 'h6' && headline.h6.lineHeight)
     || (variant === 'h7-semibold' && headline['h7-semibold'].lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { headline } }) => (
     (variant === 'h1' && headline.h1.letterSpacing)
     || (variant === 'h2' && headline.h2.letterSpacing)
+    || (variant === 'h6' && headline.h6.letterSpacing)
     || (variant === 'h7-semibold' && headline['h7-semibold'].letterSpacing)
   )};
 `;
