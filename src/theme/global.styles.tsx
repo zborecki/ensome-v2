@@ -18,6 +18,10 @@ export default createGlobalStyle`
     }
   }
 
+  footer {
+    padding: 50px 0px 30px 0px;
+  }
+
   .home-hero {
     &__button {
       .button {

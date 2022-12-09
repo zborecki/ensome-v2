@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 const handleHamburger = (isMobile: boolean): React.CSSProperties => ({
@@ -21,12 +22,7 @@ const Layout = (): JSX.Element => {
       >
         <Outlet />
       </main>
-      <footer
-        className="footer"
-        style={handleHamburger(isOpened)}
-      >
-        Footer
-      </footer>
+      <Footer style={handleHamburger(isOpened)} />
     </>
   );
 };

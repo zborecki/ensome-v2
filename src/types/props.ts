@@ -18,6 +18,10 @@ export interface ButtonRootProps {
   shadow?: boolean;
 }
 
+export interface FooterProps {
+  style?: React.CSSProperties;
+}
+
 export interface HeadlineProps extends BaseProps {
   variant: 'h1' | 'h2' | 'h6' | 'h7-semibold' | 'h4';
   color?: string;
