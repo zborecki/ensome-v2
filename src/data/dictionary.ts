@@ -34,5 +34,8 @@ export default {
   },
   reviews: {
     headline: 'What our customers say'
+  },
+  blog: {
+    headline: 'Ensome blog'
   }
 };

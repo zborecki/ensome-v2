@@ -69,6 +69,9 @@ export default {
   hamburger: {
     background: colors.white
   },
+  blog: {
+    background: colors.white
+  },
   header: {
     background: colors.prussianBlue,
     border: {
@@ -85,7 +88,8 @@ export default {
     h1: headline.h1,
     h2: headline.h2,
     'h7-semibold': headline['h7-semibold'],
-    h6: headline.h6
+    h6: headline.h6,
+    h4: headline.h4
   },
   hero: {
     background: colors.prussianBlue,
@@ -96,7 +100,8 @@ export default {
   },
   paragraph: {
     p1: paragraph.p1,
-    'p2-regular': paragraph['p2-regular']
+    'p2-regular': paragraph['p2-regular'],
+    'p3-regular': paragraph['p3-regular']
   },
   overview: {
     background: colors.white,

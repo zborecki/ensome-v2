@@ -19,7 +19,7 @@ export interface ButtonRootProps {
 }
 
 export interface HeadlineProps extends BaseProps {
-  variant: 'h1' | 'h2' | 'h6' | 'h7-semibold';
+  variant: 'h1' | 'h2' | 'h6' | 'h7-semibold' | 'h4';
   color?: string;
   underlined?: boolean;
 }
@@ -39,7 +39,7 @@ export interface NavigationProps extends BaseProps {
 }
 
 export interface ParagraphProps extends BaseProps {
-  variant: 'p2-regular' | 'p1';
+  variant: 'p2-regular' | 'p1' | 'p3-regular';
   color?: string;
 }
 
