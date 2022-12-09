@@ -96,6 +96,10 @@ export default {
     color: colors.white,
     border: colors.steelTeal
   },
+  error: {
+    code: colors.blue,
+    information: colors.white
+  },
   hero: {
     background: colors.prussianBlue,
     color: colors.white

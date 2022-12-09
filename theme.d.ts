@@ -30,6 +30,9 @@ declare module 'styled-components' {
     blog: BackgroundThemeType,
     footer: BaseThemeType & {
       border: string;
+    },
+    error: {
+      [type in 'code' | 'information']: string;
     }
   }
 }
